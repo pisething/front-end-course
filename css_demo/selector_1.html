@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <style>
+            *{
+                /* border: 1px solid green; */
+            }
+            
+            div h1 {
+               /* padding: 5px; */
+               font-style: italic;
+               background-color: yellow;
+            }
+            #pa {
+                /* background-color: yellow; */
+            }
+
+            p.sh{
+                color: red;
+            }
+
+            div > span{
+                /* background-color: blue; */
+            }
+            div ~ p{
+                background-color: blue;
+            }
+
+            a{
+                background-color: yellow;
+            }
+            a:hover{
+                background-color: red;
+            }
+           #d1 > p:first-child{
+                background-color: yellow;
+            }
+
+            p:last-child{
+                background-color: green;;
+            }
+
+            p:nth-child(2){
+                background-color: red;
+            }
+
+            #b1 {
+            height: 200px;
+            width: 500px;
+            background-color: powderblue;
+            }
+
+            #b2{
+                width: 300px;
+                border: 15px solid green;
+                padding: 50px;
+                margin: 20px;
+            }
+
+            li{
+                display: inline;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div id="d1" style="width: 50%; display: none;">
+            <p>Asian</p>
+            <p>Europe</p>
+            <p>Africa</p>
+            <p>Americ</p>
+        </div>
+        <div>
+            <p>
+                <span>Title 1</span>
+            </p>
+        </div>
+        <div>
+            <span>Title 2</span>
+        </div>
+        <p id="pa" class="sh">
+            Welcome to Cambodida
+        </p>
+        <p id="pb" class="sh">
+            Sea Geam 2023
+        </p>
+        <span class="sh">
+            Football
+        </span>
+        <a>Go to Google</a>
+
+        <div id="b1">Box 1</div>
+
+        <div id="b2">Box 2</div>
+
+        <ul>
+            <li>Cambodia</li>
+            <li>Thai</li>
+            <li>Lao</li>
+            <li>Myanmar</li>
+        </ul>
+
+    </body>
+</html>
