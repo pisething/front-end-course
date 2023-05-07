@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style>
+            #parent{
+                position: relative;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            #myBox{
+                background-color: yellow;
+                width: 50px;
+                margin-bottom: 20px;
+                position: absolute;
+            }
+        </style>
+        <script>
+            var x = 0;
+            function moveBox(){
+                var box = document.getElementById("myBox");
+                x = x + 30;
+                box.style.left = x;
+
+            }
+        </script>
+    </head>
+    <body>
+        <p id="p1">Welcome To Cambodia</p>
+        <div id="parent">
+            <div id ="myBox">
+                Box
+            </div>
+        </div>
+        
+        <!-- <img id ="image1" src="../images/java.png"> -->
+        <button onclick="show2()">Change</button>
+        <button onclick="display('Sea Game')">Test</button>
+        <br>
+        <button onclick="moveBox()">Move Box</button>
+        <script src="Student.js"></script>
+        <script src="myScript.js"></script>
+       
+    </body>
+</html>
