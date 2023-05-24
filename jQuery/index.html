@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            $("p").click(function(){
+                $(this).hide();
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <!--
+    <p onclick="doHide(this);">Welcome to Cambodia</p>
+    <p onclick="doHide(this);">SeaGame 2023</p>
+    <p onclick="doHide(this);">Phnom Penh</p>
+    -->
+    <p>Welcome to Cambodia</p>
+    <p>SeaGame 2023</p>
+    <p>Phnom Penh</p>
+</body>
+<!--
+<script>
+    var ps = document.getElementsByTagName("p");
+    // function doHide(ob){
+    //     ob.style.display = "none";
+    // }
+    for(var i=0; i < ps.length; i++){
+        ps[i].onclick = function(){
+            this.style.display = "none";
+        }
+    }
+</script>
+-->
+</html>
