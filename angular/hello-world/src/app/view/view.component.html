@@ -1,0 +1,13 @@
+<h1 class="text1">view works!</h1>
+
+<h1 [class]="myHeader">My Header</h1>
+
+<h2 [class.danger] = "hasError">Info</h2>
+
+<h3 [ngClass] = "myClasses">Using multiple classes</h3>
+
+<h2 [style.color] = "'blue'">Test color</h2>
+<h2 [style.color] = " hasError ?'red' : 'blue'">Test color</h2>
+
+<h2 [style.font-style] = "'italic'">Test Style</h2>
+<h2 [ngStyle] = "myStyle">Multiple css value</h2>
