@@ -1,0 +1,20 @@
+.text1{
+    color: blue;
+}
+
+.text-header{
+    font-style: italic;
+    color: red;
+}
+
+.danger{
+    background-color: red;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.text-success{
+    color: green;
+}
