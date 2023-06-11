@@ -1,0 +1,18 @@
+<!-- <input type="text" name="txt_name" id="txt1" #txtName> -->
+<!-- <button (click) = "name = 'Tola'">Show</button> -->
+<!-- <button (click) = "display(txtName)">Show</button> -->
+<!-- <button (click) = "show(txtName.value)">Show</button> -->
+<!-- <button (click) = "showMessage()">Show</button> -->
+<!-- <button (click) = "showInfo($event)">Show With Event Info</button> -->
+
+
+
+<!-- <app-two-way-binding></app-two-way-binding> -->
+<!-- <input type="text" [(ngModel)] = "name">
+<br/>
+Some message is here:  {{name}} -->
+<!-- <app-structural-directive></app-structural-directive> -->
+<h2>Parent: App Component </h2>
+Age : {{theAge}}
+<app-test-child (myChildEvent) = " theAge= $event" [parentData] = "name" [myGender] ="gender"></app-test-child>
+
