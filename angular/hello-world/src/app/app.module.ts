@@ -5,16 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { ViewComponent } from './view/view.component';
+import { StudentListComponent } from './student-list/student-list.component';
+import { StudentDetailComponent } from './student-detail/student-detail.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
-    ViewComponent
+    ViewComponent,
+    StudentListComponent,
+    StudentDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
