@@ -22,16 +22,19 @@ export class StudentDetailComponent implements OnInit {
 
   goNext(){
     let nextId = this.studentId + 1;
-    this.router.navigate(["/detail", nextId]);
+    //this.router.navigate(["/student-detail", nextId]);
+    this.router.navigate(["..",nextId],{relativeTo: this.activateRoute});
   }
 
   goPrevious(){
     let previousId = this.studentId - 1;
-    this.router.navigate(["/detail", previousId]);
+    //this.router.navigate(["/student-detail", previousId]);
+    this.router.navigate(["..",previousId],{relativeTo: this.activateRoute});
   }
 
   goBack(){
     this.router.navigate(["/list", {myId: this.studentId}]);
+    //this.router.navigate(["../", {myId: this.studentId}], {relativeTo: this.activateRoute});
   }
 
 }

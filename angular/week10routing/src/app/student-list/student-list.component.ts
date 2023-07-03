@@ -26,7 +26,7 @@ export class StudentListComponent implements OnInit {
 
   goToDetail(studentId: number){
     //alert(studentId);
-    this.router.navigate(["/detail",studentId]);
+    this.router.navigate(["/detail",studentId], {relativeTo: this.activatedRoute});
   }
 
   checkHighLigh(studentId: number){
