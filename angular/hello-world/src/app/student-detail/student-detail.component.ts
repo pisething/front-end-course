@@ -8,11 +8,17 @@ import { StudentService } from '../student.service';
 })
 export class StudentDetailComponent implements OnInit {
   students : any;
+  errorMessage : any;
 
   constructor(private stService: StudentService) { }
 
   ngOnInit(): void {
-    this.students = this.stService.getStudents();
+    //this.students = this.stService.getStudents();
+    this.stService.getStudentsV2().subscribe(data =>{
+      this.students = data;
+    }, error =>{
+      this.errorMessage = error;
+    });
   }
 
 }
