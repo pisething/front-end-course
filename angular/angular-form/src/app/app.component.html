@@ -1,5 +1,5 @@
 <div class="container-fluid">
-<form #studentForm="ngForm" (ngSubmit)="doSubmit()" novalidate>
+<form #studentForm="ngForm" (ngSubmit)="doSubmit(studentForm)" novalidate>
   <h2>Student Form</h2>
   {{studentForm.value | json}}
   <br/>

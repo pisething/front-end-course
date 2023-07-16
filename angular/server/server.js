@@ -13,7 +13,8 @@ app.get("/", function(req, res){
 
 app.post("/registerStudent", function(req, res){
 	console.log(req.body);
-	res.status(200).send({"message":"Data Received"});
+	res.status(401).send();
+	//res.status(200).send({"message":"Data Received", "name":"test"});
 });
 
 app.listen(PORT, function(){

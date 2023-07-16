@@ -27,11 +27,17 @@ export class AppComponent {
     }
   }
 
-  doSubmit(){
+  doSubmit(studentForm : any){
     this.isSubmitted = true;
     console.log("Submit works");
-    this.studentService.saveStudent(this.student).subscribe(data =>{
-      console.log(data);
-    });
+    
+    // this.studentService.saveStudent(this.student).subscribe(data =>{
+    //   console.log(data);
+    // }, error =>{
+    //   console.log("Something error");
+    //   console.log(error);
+    // });
+
+    console.log(studentForm);
   }
 }
