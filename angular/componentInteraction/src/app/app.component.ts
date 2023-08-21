@@ -1,50 +1,22 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { ChildComponent } from './child/child.component';
+import { MessageService } from './message.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit{
+export class AppComponent {
+  constructor(private messageService: MessageService){}
+ 
+  greeting(){
+    this.messageService.sendMessage("Hello child");
+  }
 
-  login = false;
-  
-  title = 'componentInteraction';
-  imagePath = 'assets/database.png';
-  count=0;
-  name="";
-  username!: string;
- private _myname = "";
-
- @ViewChild("useranmeRef") useranmeTextfield!: ElementRef;
-
-ngAfterViewInit(): void {
-  //this.useranmeTextfield.nativeElement.focus();
-}
-
- get myname(){
-  return this._myname;
+ askForLocation(){
+  this.messageService.sendMessage("Where are you?");
  }
 
- set myname(value: string){
-  this._myname = value;
-  if(this._myname === "piseth"){
-    alert("Welcome Piseth");
-  }
-  
- }
-
-  
-
-  doCount(){
-    this.count = this.count + 1;
-  }
-
-  checkName(value: string){
-    this.username = value;
-    if(this.username === "piseth"){
-      alert("Hello Piseth");
-    }
-    //console.log("work correctly");
-  }
+ 
 }
