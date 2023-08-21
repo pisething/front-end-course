@@ -1,0 +1,14 @@
+<div class="row mt-5">
+    <div class="col-md-4 mb-3" *ngFor="let article of articles">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">{{article.title}}</h5>
+          <p class="card-text">{{article.description}}</p>
+          <a href="#" class="btn btn-success">Read More</a>
+        </div>
+        <div class="card-footer text-muted">
+          {{article.date | date:'shortDate'}}
+        </div>
+      </div>
+    </div>
+  </div>
