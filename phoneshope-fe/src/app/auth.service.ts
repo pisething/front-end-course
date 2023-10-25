@@ -6,13 +6,13 @@ import {  HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class AuthService {
-  baseUrl = "http://localhost:3000/api/";
+  baseUrl = "http://localhost:8080/login";
 
   constructor(private http: HttpClient) { }
 
-  register(user: any){
-    return this.http.post<any>(this.baseUrl + "register",user);
-  }
+  // register(user: any){
+  //   return this.http.post<any>(this.baseUrl + "register",user);
+  // }
 
   login(user: any){
     return this.http.post<any>(this.baseUrl + "login",user);
@@ -27,7 +27,7 @@ export class AuthService {
     return localStorage.getItem('token');
   }
 
-  logOut(){
-    localStorage.removeItem('token');
-  }
+  // logOut(){
+  //   localStorage.removeItem('token');
+  // }
 }

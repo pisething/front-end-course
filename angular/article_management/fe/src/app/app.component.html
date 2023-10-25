@@ -14,9 +14,9 @@
       </li>
     </ul>
     <ul class="navbar-nav">
-        <a class="nav-link"  routerLink="/login" routerLinkActive="active">Login</a>
-        <a class="nav-link"  routerLink="/register" routerLinkActive="active">Register</a>
-        <a class="nav-link" style="cursor:pointer"  >Logout</a>        
+        <a class="nav-link" *ngIf="!auth.hasToken()"  routerLink="/login" routerLinkActive="active">Login</a>
+        <a class="nav-link" *ngIf="!auth.hasToken()"  routerLink="/register" routerLinkActive="active">Register</a>
+        <a class="nav-link" *ngIf="auth.hasToken()" (click) ="doLogOut()" style="cursor:pointer"  >Logout</a>        
     </ul>
   </div>
 </nav>    
